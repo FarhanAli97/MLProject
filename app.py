@@ -1,13 +1,14 @@
-from src.MLProject.logger import logging
-from src.MLProject.exceptions import CustomException
-import sys
+from src.MLProject.components.data_ingestion import DataIngestion
 
+def main():
+    try:
+       
+        data_ingestion = DataIngestion()
+        train_path, test_path = data_ingestion.initiate_data_ingestion()
+        print(f"Train data saved at: {train_path}")
+        print(f"Test data saved at: {test_path}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
-if __name__=="__main__":
-    logging.info("THE EXECUTION HAS STARTED")
-
-try:
-    a=1/0
-except Exception as e:
-    logging.error(f"An error occurred: {e}")
-    raise CustomException(e, sys)
+if __name__ == "__main__":
+    main()
