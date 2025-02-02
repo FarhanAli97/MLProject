@@ -19,13 +19,11 @@ def read_sql_data():
 
         if not all([host, port, user, password, db]):
             raise ValueError("One or more environment variables are missing or empty.")
-
-       
+        
         port = int(port)
 
         logging.info(f"Connecting to MySQL database: host={host}, port={port}, user={user}, database={db}")
 
-       
         conn = pymysql.connect(
             host=host,
             port=port,

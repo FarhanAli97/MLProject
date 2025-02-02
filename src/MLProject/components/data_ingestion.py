@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 class DataIngestionConfig:
     train_data_path: str = os.path.join('artifacts', 'train.csv')
     test_data_path: str = os.path.join('artifacts', 'test.csv')
-    tips_data_path: str = os.path.join('artifacts', 'tips.csv')
+    tips_data_path: str = os.path.join('artifacts', 'data_science_salary.csv')
 
 
 class DataIngestion:
@@ -30,7 +30,7 @@ class DataIngestion:
 
           
             df.to_csv(self.ingestion_config.tips_data_path, index=False, header=True)
-            logging.info('Raw data saved to tips.csv')
+            logging.info('Raw data saved to data_science_salary.csv')
 
            
             train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
