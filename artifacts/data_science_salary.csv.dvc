@@ -1,0 +1,5 @@
+outs:
+- md5: 927aeb4fab154036be28d9049d8ceb3e
+  size: 850882
+  hash: md5
+  path: data_science_salary.csv
