@@ -6,4 +6,5 @@ seaborn
 python-dotenv
 mysql-connector-python
 pymysql
+dvc
 # -e .
